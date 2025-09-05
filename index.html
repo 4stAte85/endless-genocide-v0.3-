@@ -14,10 +14,11 @@
   <!-- Conteneur principal (tout sauf crédits et footer) -->
   <div id="mainContent">
 
-    <!-- Top bar: titre + bouton Credits -->
+    <!-- Top bar: titre + boutons Credits et Difficultés -->
     <div class="top-bar">
       <h1>Endless Genocide</h1>
       <button id="creditsButton" class="credits-btn">Credits</button>
+      <button id="difficultyButton" class="credits-btn">Difficultés</button>
     </div>
 
     <!-- Barre de recherche -->
@@ -27,66 +28,75 @@
     <div class="fight-list">
 
       <!-- Classic Sans -->
-      <div class="fight-card">
+      <div class="fight-card fade">
         <div class="img-container">
           <img src="Images/sans_classic.png" alt="Classic Sans Fight">
         </div>
         <h2>Sans Fight (Classique)</h2>
-        <a href="https://jcw87.github.io/c2-sans-fight/" target="_blank" class="fight-button">Play</a>
+        <a href="https://jcw87.github.io/c2-sans-fight/" target="_blank" class="fade-button">Play</a>
       </div>
 
       <!-- Underfell Sans -->
-      <div class="fight-card">
+      <div class="fight-card cataclysm">
         <div class="img-container">
           <img src="Images/underfell_sans.png" alt="Underfell Sans Fight">
         </div>
         <h2>Underfell Sans Fight</h2>
-        <a href="https://caijiqaq.github.io/UNDERFELL/" target="_blank" class="fight-button">Play</a>
+        <a href="https://caijiqaq.github.io/UNDERFELL/" target="_blank" class="cataclysm-button">Play</a>
       </div>
 
       <!-- Ink Sans -->
-      <div class="fight-card">
+      <div class="fight-card oblivion">
         <div class="img-container">
           <img src="Images/ink_sans.png" alt="Ink Sans Fight">
         </div>
         <h2>BH: Ink Sans Fight</h2>
-        <a href="https://gamejolt.com/games/bh-Ink/922021" target="_blank" class="die-button">Play</a>
+        <a href="https://gamejolt.com/games/bh-Ink/922021" target="_blank" class="oblivion-button">Play</a>
       </div>
 
       <!-- DustIIISans -->
-      <div class="fight-card">
+      <div class="fight-card oblivion">
         <div class="img-container">
           <img src="Images/dustIII_sans.png" alt="DustSans Fight">
         </div>
         <h2>DustDustDust Sans Fight</h2>
-        <a href="https://gamejolt.com/games/bh-ddd/875911" target="_blank" class="die-button">Play</a>
+        <a href="https://gamejolt.com/games/bh-ddd/875911" target="_blank" class="oblivion-button">Play</a>
       </div>
 
       <!-- Bad Time Trio -->
-      <div class="fight-card">
+      <div class="fight-card torment">
         <div class="img-container">
           <img src="Images/bad_time_trio.png" alt="Bad Time Trio">
         </div>
         <h2>Bad Time Trio</h2>
-        <a href="https://mario1d240.github.io/bad-time-trio-simulator/" target="_blank" class="fight-button">Play</a>
+        <a href="https://mario1d240.github.io/bad-time-trio-simulator/" target="_blank" class="torment-button">Play</a>
       </div>
 
       <!-- Endless Bad Time -->
-      <div class="fight-card">
+      <div class="fight-card brokensoul">
         <div class="img-container">
           <img src="Images/endless_sans.png" alt="Endless Bad Time">
         </div>
         <h2>Endless Bad Time</h2>
-        <a href="https://doodle-pile.gitlab.io/endless-sans/" target="_blank" class="fight-button">Play</a>
+        <a href="https://doodle-pile.gitlab.io/endless-sans/" target="_blank" class="brokensoul-button">Play</a>
       </div>
 
       <!-- Horrortale Sans -->
-      <div class="fight-card">
+      <div class="fight-card nightmare">
         <div class="img-container">
           <img src="Images/horrortale_sans.png" alt="Horrortale Sans">
         </div>
         <h2>Horrortale Sans</h2>
-        <a href="https://sansfromundertale.itch.io/bad-time-simulator-horrortale" target="_blank" class="die-button">Play</a>
+        <a href="https://sansfromundertale.itch.io/bad-time-simulator-horrortale" target="_blank" class="nightmare-button">Play</a>
+      </div>
+
+      <!-- Really Bad Time Simulator -->
+      <div class="fight-card nightmare">
+        <div class="img-container">
+          <img src="Images/really_bad_time_sans.png" alt="really_bad_time_sans">
+        </div>
+        <h2>Really Bad Time</h2>
+        <a href="https://gotoanddie.github.io/c2-sans-fight/" target="_blank" class="nightmare-button">Play</a>
       </div>
 
     </div>
@@ -95,7 +105,7 @@
 
   <!-- Footer -->
   <footer>
-    © 2025 Endless Genocide - Fan project (Undertale by Toby Fox)
+    © 2025 Endless Genocide - Fan project (Undertale by Toby Fox) v0.3
   </footer>
 
   <!-- Page crédits -->
@@ -108,6 +118,18 @@
     <h1>DONNE TA MOULA STP!</h1>
     <button id="returnButton">Return</button>
   </div>
+
+  <!-- Page Difficultés -->
+<div id="difficultyPage" style="display: none;">
+  <h1>Difficulty Levels</h1>
+  <p class="fade-desc"><strong>Fade:</strong> Easy, but don’t get caught off guard 😈</p>
+  <p class="brokensoul-desc"><strong>Broken Soul:</strong> Hard, survive if you can 🖤</p>
+  <p class="torment-desc"><strong>Torment:</strong> Very Hard, agony awaits 😱</p>
+  <p class="nightmare-desc"><strong>Nightmare:</strong> Intense, your worst nightmare 👹</p>
+  <p class="cataclysm-desc"><strong>Cataclysm:</strong> Almost Impossible, chaos everywhere ⚡</p>
+  <p class="oblivion-desc"><strong>Oblivion:</strong> CATASTROPHIC, you might lose everything 💀</p>
+  <button id="returnDifficultyButton">Return</button>
+</div>
 
   <script src="script.js"></script>
 </body>

@@ -78,13 +78,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s;
+  transition: transform 0.2s, border-color 0.2s;
   height: 280px;
   padding: 10px;
 }
 .fight-card:hover {
   transform: scale(1.05);
-  border-color: red;
 }
 
 /* Images */
@@ -103,8 +102,13 @@ body {
 }
 
 /* Boutons Jouer */
-.fight-button,
-.die-button {
+.torment-button,
+.cataclysm-button,
+.oblivion-button,
+.fade-button,
+.brokensoul-button,
+.nightmare-button,
+.fight-button {
   display: inline-block;
   border: 2px solid white;
   padding: 8px 12px;
@@ -117,17 +121,42 @@ body {
   max-width: 70%;
   transition: 0.2s;
 }
-.fight-button:hover {
-  background: white;
-  color: black;
-}
-.die-button:hover {
-  background: black;
-  color: red;
-}
 
-/* Page crédits */
-#creditsPage {
+/* Hover boutons */
+.fight-button:hover { background: white; color: black; }
+.oblivion-button:hover { color: #FFD700; }
+.torment-button:hover { color: #8A2BE2; }
+.nightmare-button:hover { color: crimson; }
+.brokensoul-button:hover { color: blue; }
+.fade-button:hover { color: green; }
+.cataclysm-button:hover { color: #00FFFF; }
+
+/* Hover cartes dynamiques */
+.fight-card.oblivion:hover { border-color: #FFD700; }
+.fight-card.torment:hover { border-color: #8A2BE2; }
+.fight-card.nightmare:hover { border-color: crimson; }
+.fight-card.brokensoul:hover { border-color: blue; }
+.fight-card.fade:hover { border-color: green; }
+.fight-card.cataclysm:hover { border-color: #00FFFF; }
+
+/* Texte de difficulté sur la carte */
+.difficulty-text {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px black;
+  pointer-events: none;
+}
+.fight-card.fade .difficulty-text { color: green; }
+.fight-card.cataclysm .difficulty-text { color: #00FFFF; }
+.fight-card.oblivion .difficulty-text { color: #FFD700; }
+.fight-card.torment .difficulty-text { color: #8A2BE2; }
+.fight-card.nightmare .difficulty-text { color: crimson; }
+.fight-card.brokensoul .difficulty-text { color: blue; }
+
+/* Pages crédits et difficultés */
+#creditsPage, #difficultyPage {
   display: none;
   background: black;
   color: white;
@@ -140,15 +169,15 @@ body {
   padding-top: 50px;
   z-index: 1000;
 }
-#creditsPage h1 {
+#creditsPage h1, #difficultyPage h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-#creditsPage p {
+#creditsPage p, #difficultyPage p {
   font-size: 16px;
   margin: 5px 0;
 }
-#creditsPage #returnButton {
+#creditsPage button, #difficultyPage button {
   margin-top: 30px;
   padding: 10px 15px;
   font-family: 'Press Start 2P', cursive;
@@ -158,7 +187,7 @@ body {
   color: white;
   cursor: pointer;
 }
-#creditsPage #returnButton:hover {
+#creditsPage button:hover, #difficultyPage button:hover {
   background: white;
   color: black;
 }
@@ -168,4 +197,29 @@ footer {
   font-size: 12px;
   opacity: 0.6;
   padding: 30px 0;
+  margin-top: auto;
+}
+
+/* Couleurs pour la page Difficulty */
+.fade-desc { color: green; }
+.brokensoul-desc { color: blue; }
+.torment-desc { color: purple; }
+.nightmare-desc { color: crimson; }
+.cataclysm-desc { color: cyan; }
+.oblivion-desc { color: gold; }
+
+/* Pour le bouton Return */
+#returnDifficultyButton {
+  margin-top: 30px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border: 2px solid white;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+#returnDifficultyButton:hover {
+  background: white;
+  color: black;
 }
